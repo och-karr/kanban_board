@@ -69,6 +69,12 @@ function Card(description) {
 		var $card = $('<li>').addClass('card');
 		var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 		var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+
+		//podpinanie odpowiednich zdarzeń pod stworzone elementy - tylko usuwanie karty
+		$cardDelete.click(function(){
+			self.removeCard();
+		});
+
 	
 
 	
