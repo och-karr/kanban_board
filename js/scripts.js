@@ -8,7 +8,7 @@ function randomString() {
     return str; //losowy identyfikator dla kazdej tablicy i karteczki
 }
 
-//klasa kolumny
+//funkcja konstruujaca klase kolumny - Column
 function Column(name) {
     var self = this;
 
@@ -54,3 +54,18 @@ Column.prototype = {
 		this.$element.remove(); //usunie kolumne gdy nacisniemy(click) x
 	}
 };
+
+//funkcja konstruujaca klase Card:
+function Card(description) {
+	var self = this;
+
+    this.id = randomString();
+    this.description = description;
+    this.$element = createCard();
+
+    function createCard() {
+    	// Implementation of card creation
+    }
+}
+
+
