@@ -64,8 +64,15 @@ function Card(description) {
     this.$element = createCard();
 
     function createCard() {
-    	// Implementation of card creation
-    }
+
+		//tworzenie elementow, z których będzie składała się karta
+		var $card = $('<li>').addClass('card');
+		var $cardDescription = $('<p>').addClass('card-description').text(self.description);
+		var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+	
+
+	
+	}
 }
 
 
