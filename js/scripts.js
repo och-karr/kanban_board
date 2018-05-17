@@ -92,4 +92,14 @@ Card.prototype = {
 }
 }
 
+//metoda podpieta bezposrednio do obiektu board - nie jest to klasa
+var board = {
+    name: 'Kanban Board',
+    addColumn: function(column) {
+      this.$element.append(column.$element); //wskazuje na board.$element
+      initSortable();
+    },
+    $element: $('#board .column-container')
+};
+
 
