@@ -17,7 +17,8 @@ function Column(name) {
     this.$element = createColumn();
 
 	function createColumn() { // Przy tworzeniu nowej instancji klasy Column tworzony jest też element jQuery
-		//tworzenie elementów, z których będzie składała się kolumna.
+
+		//tworzenie elementów, z których będzie składała się kolumna:
 		// Znak dolara przed nazwą zmiennej dodaje się do zmiennych, ktore trzymają element jQuery.
 		var $column = $('<div>').addClass('column'); //element div o klasie column
 		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);//dodajemy tytul i wypelniamy tekstem z wlasciwosci name
@@ -25,6 +26,16 @@ function Column(name) {
 		var $columnDelete = $('<button>').addClass('btn-delete').text('x');//przycisk usuwajacy liste
 		var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');//przycisk dodajacy karteczke
 
-		
+		//podpinanie odpowiednich zdarzen:
+		//usuwanie kolumny za pomoca klikniecia
+		$columnDelete.click(function() {
+			self.removeColumn();
+		});
+		//dodanie nowej karteczki i nadanie jej nazwy
+		$columnAddCard.click(function() {
+			self.addCard(new Card(prompt("Enter the name of the card"))); //new - co to bylo ?
+		});
+
+	
     }
   }
