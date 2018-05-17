@@ -102,4 +102,19 @@ var board = {
     $element: $('#board .column-container')
 };
 
+//korzystamy z rozszerzenia jQueryUI - biblioteka.
+//metoda sortable - sortujemy elementy za pomoca metody drag'n'drop
+function initSortable() {
+	$('.column-card-list').sortable({ //wybieramy wszystkie listy kart i dodajemy funkcjonalnosc sortowania
+	  connectWith: '.column-card-list', 
+	  placeholder: 'card-placeholder' //trzyma nazwe klasy, ktora pojawia sie po najechaniu na puste pole
+	}).disableSelection(); //wyłączenie możliwości zaznaczania tekstu na kartach, które przeciągamy
+  }
 
+  //podpiecie na element create-column zdarzenia klikniecia
+  $('.create-column')
+  .click(function(){
+	var name = prompt('Enter a column name');
+	var column = new Column(name);
+    	board.addColumn(column);
+  });
