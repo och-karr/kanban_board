@@ -41,12 +41,13 @@ function Column(name) {
 				.append($columnDelete)
 				.append($columnAddCard)
 				.append($columnCardList);
-				
+
 		return $column;
 	
     }
   }
 
+//metoda dla klasy column
 Column.prototype = {
 	addCard: function(card) {
 		this.$element.children('ul').append(card.$element); //podpinamy karte do ul
@@ -81,9 +82,14 @@ function Card(description) {
 				.append($cardDescription);
 
 		return $card;
-
-	
 	}
+}
+
+//metoda dla klasy card
+Card.prototype = {
+	removeCard: function() {
+		this.$element.remove();
+}
 }
 
 
