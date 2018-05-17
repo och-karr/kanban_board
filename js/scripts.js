@@ -33,7 +33,7 @@ function Column(name) {
 		});
 		//dodanie nowej karteczki i nadanie jej nazwy
 		$columnAddCard.click(function() {
-			self.addCard(new Card(prompt("Enter the name of the card"))); //new - co to bylo ?
+			self.addCard(new Card(prompt("Enter the name of the card"))); //new - tworzenie nowego obiektu
 		});
 
 		//konstruowanie kolumny i jej zwrocenie:
@@ -45,3 +45,12 @@ function Column(name) {
 	
     }
   }
+
+Column.prototype = {
+	addCard: function(card) {
+		this.$element.children('ul').append(card.$element); //podpinamy karte do ul
+	},
+	removeColumn: function() {
+		this.$element.remove(); //usunie kolumne gdy nacisniemy(click) x
+	}
+};
