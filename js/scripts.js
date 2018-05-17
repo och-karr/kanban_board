@@ -38,9 +38,10 @@ function Column(name) {
 
 		//konstruowanie kolumny i jej zwrocenie:
 		$column.append($columnTitle)
-		.append($columnDelete)
-		.append($columnAddCard)
-		.append($columnCardList);
+				.append($columnDelete)
+				.append($columnAddCard)
+				.append($columnCardList);
+				
 		return $column;
 	
     }
@@ -75,7 +76,11 @@ function Card(description) {
 			self.removeCard();
 		});
 
-	
+		//konstruowanie karty i jej zwrócenie
+		$card.append($cardDelete)
+				.append($cardDescription);
+
+		return $card;
 
 	
 	}
