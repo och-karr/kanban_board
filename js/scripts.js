@@ -36,6 +36,12 @@ function Column(name) {
 			self.addCard(new Card(prompt("Enter the name of the card"))); //new - co to bylo ?
 		});
 
+		//konstruowanie kolumny i jej zwrocenie:
+		$column.append($columnTitle)
+		.append($columnDelete)
+		.append($columnAddCard)
+		.append($columnCardList);
+		return $column;
 	
     }
   }
