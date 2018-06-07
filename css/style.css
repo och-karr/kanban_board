@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    font-family: Raleway;
+    background: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.836);
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.create-column {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+.column {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0 10px 10px 10px;
+    margin: 10px;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.column-title {
+    text-align: center; 
+    padding: 2px 5px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.card {
+    padding: 0;
+    background-color: skyblue;
+    margin: 5px;
+}
+
+.card-description {
+    padding: 10px;
+    font-family: "Kalam";
+    font-size: 18px;
+    margin: 0;
+    min-height: 80px;
+}
+
+.add-card {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    font-family: Raleway;
+}
+
+.btn-delete {
+    margin: 2px;
+    font-size: 10px;
+}

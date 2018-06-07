@@ -25,6 +25,7 @@ function Column(name) {
 		var $columnCardList = $('<ul>').addClass('column-card-list');//lista na kartki
 		var $columnDelete = $('<button>').addClass('btn-delete').text('x');//przycisk usuwajacy liste
 		var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');//przycisk dodajacy karteczke
+		
 
 		//podpinanie odpowiednich zdarzen:
 		//usuwanie kolumny za pomoca klikniecia
@@ -37,8 +38,8 @@ function Column(name) {
 		});
 
 		//konstruowanie kolumny i jej zwrocenie:
-		$column.append($columnTitle)
-				.append($columnDelete)
+		$column.append($columnDelete)
+				.append($columnTitle)
 				.append($columnAddCard)
 				.append($columnCardList);
 
