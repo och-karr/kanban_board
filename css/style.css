@@ -7,7 +7,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.836);
-    overflow: auto;
 }
 
 h1 {
@@ -19,7 +18,10 @@ h1 {
 
 .column-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    overflow: auto;
+    min-height: 80vh;
+    max-height: 100%;
 }
 
 .create-column {

@@ -42,9 +42,7 @@ function Column(name) {
 				.append($columnTitle)
 				.append($columnAddCard)
 				.append($columnCardList);
-
 		return $column;
-	
     }
   }
 
@@ -61,7 +59,6 @@ Column.prototype = {
 //funkcja konstruujaca klase Card:
 function Card(description) {
 	var self = this;
-
     this.id = randomString();
     this.description = description;
     this.$element = createCard();
@@ -90,7 +87,7 @@ function Card(description) {
 Card.prototype = {
 	removeCard: function() {
 		this.$element.remove();
-}
+	}
 }
 
 //metoda podpieta bezposrednio do obiektu board - nie jest to klasa
@@ -110,12 +107,12 @@ function initSortable() {
 	  connectWith: '.column-card-list', 
 	  placeholder: 'card-placeholder' //trzyma nazwe klasy, ktora pojawia sie po najechaniu na puste pole
 	}).disableSelection(); //wyłączenie możliwości zaznaczania tekstu na kartach, które przeciągamy
-  }
+}
 
-  //podpiecie na element create-column zdarzenia klikniecia
-  $('.create-column')
-  .click(function(){
+//podpiecie na element create-column zdarzenia klikniecia
+$('.create-column')
+.click(function(){
 	var name = prompt('Enter a column name');
 	var column = new Column(name);
-    	board.addColumn(column);
-  });
+	board.addColumn(column);
+});
