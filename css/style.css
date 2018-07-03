@@ -37,6 +37,7 @@ h1 {
     border-radius: 0 10px 10px 10px;
     margin: 10px;
     min-width: 200px;
+    width: 25%;
     max-width: 400px;
 }
 
@@ -78,4 +79,11 @@ button {
 .btn-delete {
     margin: 2px;
     font-size: 10px;
+}
+
+.card-placeholder {
+    background-color: rgba(83, 78, 78, 0.253);
+    border: 2px black dashed;
+    height: 60px;
+    width: 80%;
 }
