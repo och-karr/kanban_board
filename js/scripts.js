@@ -1,3 +1,7 @@
+window.addEventListener("load", function() {
+    console.log("All resources finished loading!");
+});
+
 //funkcja generujaca losowe id:
 function randomString() {
     var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
@@ -59,9 +63,11 @@ Column.prototype = {
 //funkcja konstruujaca klase Card:
 function Card(description) {
 	var self = this;
-    this.id = randomString();
-    this.description = description;
-    this.$element = createCard();
+	this.id = randomString();
+	this.description = description;
+	if (description != null) {
+		this.$element = createCard();
+	}else {}
 
     function createCard() {
 
@@ -113,8 +119,10 @@ function initSortable() {
 $('.create-column')
 .click(function(){
 	var name = prompt('Enter a column name');
-	var column = new Column(name);
-	board.addColumn(column);
+	if (name != null) {
+		var column = new Column(name);
+		board.addColumn(column);
+	} else {}
 });
 
 // CREATING COLUMNS
