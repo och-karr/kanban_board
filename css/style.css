@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,700');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
 
 body {
@@ -7,12 +7,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.836);
+    color: rgb(22, 22, 22);
 }
 
 h1 {
     text-align: center;
     color: white;
-    font-weight: 600;
     font-size: 40px;
 }
 
@@ -77,6 +77,11 @@ button {
 }
 
 .btn-delete {
+    margin: 2px;
+    font-size: 10px;
+}
+
+.btn-edit {
     margin: 2px;
     font-size: 10px;
 }
