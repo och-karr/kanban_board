@@ -73,6 +73,9 @@ $(function() {
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 			var $cardEdit = $('<button>').addClass('btn-edit').text('edit');
+			var $colorEditFirst = $('<button>').addClass('color-edit-first').text(' ');
+			var $colorEditSecond = $('<button>').addClass('color-edit-second').text(' ');
+			var $colorEditThird = $('<button>').addClass('color-edit-third').text(' ');
 
 			//podpinanie odpowiednich zdarzeń pod stworzone elementy - tylko usuwanie karty
 			$cardDelete.click(function(){
@@ -83,14 +86,35 @@ $(function() {
 				self.editCard();
 			});
 
+			$colorEditFirst.click(function(){
+				$card.css("background-color", "rgb(255, 37, 37)");
+			});
+
+			$colorEditSecond.click(function(){
+				$card.css("background-color", "rgb(255, 219, 58)");
+			});
+
+			$colorEditThird.click(function(){
+				$card.css("background-color", "rgb(72, 255, 81)");
+			});
+
+			var rand1 = Math.floor(Math.random() * 100);
+			var rand2 = Math.floor(Math.random() * 100)
+ 			var cardColor = "rgb(" + (230-rand1) + "," + (240-rand2) + "," + 255 + " )"; 
+ 			$card.css("background-color", cardColor);
+
 			//konstruowanie karty i jej zwrócenie
 			$card.append($cardDelete)
 					.append($cardEdit)
+					.append($colorEditFirst)
+					.append($colorEditSecond)
+					.append($colorEditThird)
 					.append($cardDescription);
 
 			return $card;
 		}
 	}
+
 
 	//metoda dla klasy card
 	Card.prototype = {

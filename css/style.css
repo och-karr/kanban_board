@@ -54,7 +54,6 @@ ul {
 
 .card {
     padding: 0;
-    background-color: skyblue;
     margin: 5px;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.521);
 }
@@ -76,14 +75,31 @@ button {
     font-family: Raleway;
 }
 
-.btn-delete {
+.btn-delete, .btn-edit  {
     margin: 2px;
     font-size: 10px;
 }
 
-.btn-edit {
-    margin: 2px;
-    font-size: 10px;
+[class^="color-edit"] {
+    float: right;
+    margin: 4px 2px 0 0;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.color-edit-first {
+    background: rgb(255, 37, 37);
+    border-color:rgb(255, 37, 37);
+}
+
+.color-edit-second {
+    background: rgb(255, 219, 58);
+    border-color: rgb(255, 219, 58);
+}
+
+.color-edit-third {
+    background: rgb(72, 255, 81);
+    border-color: rgb(72, 255, 81);
 }
 
 .card-placeholder {
